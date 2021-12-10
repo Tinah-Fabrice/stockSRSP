@@ -20,11 +20,13 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::get('/home', 'HomeController@index')->name('home');
     
-    Route::get('/registre','Auth\RegisterController@userListe');
+    Route::get('/registre','Auth\RegisterController@userListe')->name('registre');
 
-    Route::get('/registre/{iduser}','Auth\RegisterController@userDelete')->name('userDelete');
+    Route::post('/registreUpdate/{iduser}','Auth\RegisterController@userUpdate')->name('userUpdate');
 
-    Route::put('/registre/{iduser}','Auth\RegisterController@userEdit')->name('userEdit');
+    Route::get('/registreDelete/{iduser}','Auth\RegisterController@userDelete')->name('userDelete');
+
+    Route::get('/registre/{iduser}','Auth\RegisterController@userEdit')->name('userEdit');
 
 
 });

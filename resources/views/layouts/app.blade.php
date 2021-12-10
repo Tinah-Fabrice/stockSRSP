@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Tinah Fabrice</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -37,7 +37,7 @@
                             </li>
                        
                             @else
-                            <a href="{{ url('/register') }}">Register</a>
+                         
                             @endauth
                         </div>
                     @endif
